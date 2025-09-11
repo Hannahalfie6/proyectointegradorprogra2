@@ -34,7 +34,12 @@
 				</ul>
 				<ul class="right-navbar">
 					<li>
-						<a href="profile.html"> Nombre del usuario <i class="fas fa-user"></i></a>
+						<% if (usuario.nombreUsuario!= undefined) { %>
+							<a href="profile.html"> <%= usuario.nombreUsuario %> <i class="fas fa-user"></i></a>
+						<%  } else { %>
+							<a href="profile.html"> Nombre de usuario <i class="fas fa-user"></i></a>
+						<%  }%>
+						
 					</li>
 					<li>
 						<form action="" method="post">

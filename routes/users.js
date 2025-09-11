@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
+let usersController = require('../controllers/usersController');
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/profile', usersController.profile);
 
-//form registro
-router.get('/registro', function(req,res) {
-  res.send("Formulario de registro enviado")
-});
+
+router.get('/login', usersController.login);
+
+
+router.get('/register', usersController.register);
+
+
 
 module.exports = router;

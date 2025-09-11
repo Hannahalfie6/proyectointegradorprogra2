@@ -4,7 +4,7 @@ let indexController = {
     home: function(req,res){
 
         //return res.send(data)
-        return res.render('index', {data: data})
+        return res.render('index', {data: data, usuario:{ }})
     }
 }
 
