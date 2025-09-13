@@ -16,7 +16,7 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Productos</h2>
+				<h2 class="products-title">PRODUCTOS</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
 			 <% for( let i = 0; i < data.productos.length; i++ ) { %>
@@ -28,7 +28,7 @@
 							</figure>
 							<article class="product-box_data">
 								<h2><%= data.productos[i].nombre %></h2>
-								<p>D<%= data.productos[i].descripcion %></p>
+								<p><%= data.productos[i].descripcion %></p>
 								<p>Comentarios: <%= data.productos[i].comentarios.length %></p>
 							</article>
 						</a>
