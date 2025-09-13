@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
- <head> <%- include('./partials/head') %> </head>
+<%- include('./partials/head') %>
 <!-- Include Head -->
 
 <body>
 	<!-- Header -->
-	<header> <%- include('./partials/header') %> </header>
+	<%- include('./partials/header') %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -20,10 +20,21 @@
 			<h2 class="col-12"> Cargar producto </h2>
 
 	<form method = 'get' action="/">
-		<input placeholder="Agregar una imagen" type="text" name="imagen"> <label> Imagen del producto: </label>
-		<input placeholder="Nombre del producto" type="text" name="nombre"> <label> Nombre del producto: </label>
-		<input placeholder="Agregar una descripción" type="textarea" name="descripcion"> <label> Descripción del producto: </label>
-		<button type="submit"> Subir producto </button>
+		<label> Imagen del producto: </label>
+		<div>
+			<input placeholder="Agregar una imagen" type="text" name="imagen">
+		</div> 
+		<label> Nombre del producto: </label>
+		<div>
+			<input placeholder="Nombre del producto" type="text" name="nombre"> 
+		</div>
+		<label> Descripción del producto: </label>
+		<div>
+			<input placeholder="Agregar una descripción" type="textarea" name="descripcion"> 
+		</div>
+		<div>
+			<button type="submit"> Subir producto </button>
+		</div>
 	</form>
 
 	<!-- footer -->

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<head> <%- include('./partials/head') %> </head>
+<%- include('./partials/head') %>
 
 <body>
 	<!-- Header -->
-	<header><%- include('./partials/header') %> </header>
+	<%- include('./partials/header') %>
 	<!-- /Header -->
 	
 	<!-- product detail -->
@@ -13,7 +13,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">Nombre del producto</h2> 
 			<p class="product-detail-description">
-				<a href="/products/edit/<%= id %>">Editar</a>
+				<a href="/products/<%= products.id %>">Editar</a>
 			</p>
 		</div>
 		<div class="product-detail">
