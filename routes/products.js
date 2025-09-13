@@ -3,7 +3,7 @@ var router = express.Router();
 let productsController = require('../controllers/productsController');
 
 /* GET home page. */
-router.get('/detalle', productsController.detalle);
+router.get('/detalle/:id', productsController.detalle);
 router.get('/agregar', productsController.agregar);
 router.get('/editar', productsController.editar);
 

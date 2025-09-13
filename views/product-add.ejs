@@ -17,20 +17,19 @@
 			</div>
 
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> Cargar producto </h2>
 
-	<form method = 'get' action="/">
+	<form class="product-form" method="get" action="/">
 		<label> Imagen del producto: </label>
 		<div>
-			<input placeholder="Agregar una imagen" type="text" name="imagen">
+			<input placeholder="Agregar una imagen" type="image" name="imagen" required>
 		</div> 
 		<label> Nombre del producto: </label>
 		<div>
-			<input placeholder="Nombre del producto" type="text" name="nombre"> 
+			<input placeholder="Nombre del producto" type="text" name="nombre" required> 
 		</div>
 		<label> Descripción del producto: </label>
 		<div>
-			<input placeholder="Agregar una descripción" type="textarea" name="descripcion"> 
+			<input placeholder="Agregar una descripción" type="textarea" name="descripcion" required> 
 		</div>
 		<div>
 			<button type="submit"> Subir producto </button>
