@@ -10,6 +10,9 @@ let productosController = {
     },
     editar: function(req, res) {
         return res.render('product-edit', {usuario:{ }})
+    },
+    busqueda: function (req,res) {
+        return res.render('search-results', {usuario:{ }})
     }
 };
 

@@ -15,9 +15,23 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-				<form action="/users.js" method="get"></form>
-			</h2>
+			<form class="login-form" method="get" action="/">
+		<label>Email: </label>
+		<div>
+			<input class="campo" placeholder="Ingrese su email" type="email" name="email" required>
+		</div> 
+		<label>Usuario: </label>
+		<div>
+			<input class="campo" placeholder="Ingrese un nombre de usuario" type="text" name="usuario" required> 
+		</div>
+		<label>Contraseña: </label>
+		<div>
+			<input class="campo" placeholder="Ingrese su contraseña" type="password" name="contraseña" required> 
+		</div>
+		<div>
+			<button type="submit"> Registrarme </button>
+		</div>
+	</form>
 
 	<!-- footer -->
 	<%- include('./partials/footer') %>
