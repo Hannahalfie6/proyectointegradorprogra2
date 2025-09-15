@@ -134,3 +134,35 @@
   border-radius: 6px;
   font-size: 14px;
 }
+
+
+footer {
+  background-color: #fff5f5;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b4848;
+}
+.footer-nombres {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #bcaeae47;
+}
+
+.footer-nombres .footer-label {
+  font-size: 20px;
+  color: #787373;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-nombres ul {
+  list-style: none;
+}
+
+.footer-nombres ul li {
+  font-size: 16px;
+  color: #a18d8d;
+  margin-bottom: 5px;
+}
