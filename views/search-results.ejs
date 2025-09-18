@@ -15,7 +15,16 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> Resultado de busqueda estatico </h2>
+			<% for (let i = 0; i < productos.lenght; i++) { %>
+				<div class="col-12">
+					<article class="product-box">
+						<h2>Nombre: <%= productos[i].nombre %></h2>
+						<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
+						<p>Descripcion: <%= productos[i].descripcion %> </p>
+						<p>Comentarios: <%= productos[i].comentarios.lenght %> </p>
+					</article>
+				</div>	
+			<% } %>
 
 	<!-- footer -->
 	<%- include('./partials/footer') %>

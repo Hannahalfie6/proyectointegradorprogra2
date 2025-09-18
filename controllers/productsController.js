@@ -12,7 +12,7 @@ let productosController = {
         return res.render('product-edit', {usuario:{ }})
     },
     busqueda: function (req,res) {
-        return res.render('search-results', {usuario:{ }})
+        return res.render('search-results', {usuario:{ }}, {productos: data.productos})
     }
 };
 
