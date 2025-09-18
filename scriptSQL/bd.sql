@@ -1,3 +1,6 @@
+CREATE SCHEMA proyecto;
+USE proyecto;
+
 CREATE TABLE usuarios (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(100) NOT NULL,
@@ -28,7 +31,7 @@ CREATE TABLE comentarios (
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     deletedAt TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
-    FOREIGN KEY (producto_id) REFERENCES producto(id),
+    FOREIGN KEY (producto_id) REFERENCES productos(id),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 	);
 
