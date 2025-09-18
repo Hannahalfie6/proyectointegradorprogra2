@@ -1,11 +1,14 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('./partials/head') %>
+
+<%- include("./partials/head") %>
 
 <body>
 	<!-- Header -->
-	<%- include('./partials/header') %>
+	<%- include("./partials/header") %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -15,19 +18,22 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<% for (let i = 0; i < productos.lenght; i++) { %>
+			<% for( let i = 0; i < productos.length; i++ ) { %>
 				<div class="col-12">
-					<article class="product-box">
-						<h2>Nombre: <%= productos[i].nombre %></h2>
-						<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
-						<p>Descripcion: <%= productos[i].descripcion %> </p>
-						<p>Comentarios: <%= productos[i].comentarios.lenght %> </p>
-					</article>
-				</div>	
+						<article class="product-box">
+							<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
+								<h2>Nombre: <%= productos[i].nombre %></h2>
+								<p>Descripcion: <%= productos[i].descripcion %></p>
+								<p>Comentarios: <%= productos[i].comentarios.length %></p>
+							</article>
+				</div>
 			<% } %>
+		</div>
+	</div>
+			
 
 	<!-- footer -->
-	<%- include('./partials/footer') %>
+	<%- include("./partials/footer") %>
 	<!-- /footer -->
 </body>
 
