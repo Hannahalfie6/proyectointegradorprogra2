@@ -5,6 +5,5 @@ let productsController = require('../controllers/productsController');
 /* GET home page. */
 router.get('/detalle/:id', productsController.detalle);
 router.get('/agregar', productsController.agregar);
-router.get('/editar', productsController.editar);
 
 module.exports = router;
