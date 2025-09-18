@@ -7,9 +7,6 @@ let productosController = {
     },
     agregar: function(req, res) {
         return res.render('product-add', {usuario:{ }})
-    },
-    editar: function(req, res) {
-        return res.render('product-edit', {usuario:{ }})
     }
 };
 
