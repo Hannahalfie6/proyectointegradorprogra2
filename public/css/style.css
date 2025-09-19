@@ -25,6 +25,11 @@
   border-radius: 12px;
   text-align: center;
 }
+.product-box.resultado{
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+}
 
 .product-box_image {
   width: 100%;

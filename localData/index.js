@@ -1,7 +1,7 @@
 let data = {
     usuario: {
-        nombreUsuario: 'MagdalenaS',
-        emailUsuario: 'maguisanchez08@gmail.com',
+        nombreUsuario: 'Magdalena Sanchez',
+        emailUsuario: 'ms@gmail.com',
         contraUsuario: '1234',
         fotoUsuario: '/images/users/usuario1.jpg'
 
