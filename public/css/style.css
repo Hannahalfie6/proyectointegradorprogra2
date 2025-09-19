@@ -46,7 +46,6 @@
   object-fit: contain;
 }
 
-
 .product-box_data h2 {
   font-size: 15px;
   color: #333;
@@ -58,6 +57,13 @@
   font-size: 0.95rem;
   color: #666;
   margin: 4px 0;
+}
+
+.products-wrapper .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
 }
 
 .product-form {
@@ -90,7 +96,6 @@
   font-size: 14px;
   background: #ffffff;
 }
-
 
 .product-form button {
   background-color: #ecdcdc;
