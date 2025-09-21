@@ -10,7 +10,7 @@ let usersController = {
         return res.render('login', {usuario:{ }})
     },
     logout: function(req, res){
-        return res.render('login', {usuario: { }})
+        return res.render('login')
     }
 };
 
