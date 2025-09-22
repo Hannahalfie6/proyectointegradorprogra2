@@ -11,6 +11,7 @@ let data = {
         {
             nombre: 'Termo Quencher 30OZ',
             imagen: '/images/products/termo1.jpg',
+            idProducto: 'producto1',
             descripcion: 'El Stanley Quencher 30 oz es un vaso térmico de acero inoxidable, con tapa giratoria, pajita, asa y gran capacidad para mantener bebidas frías o calientes por horas.',
             comentarios: [
                 {
@@ -29,6 +30,7 @@ let data = {
         {
             nombre: 'Termo Classic Flip',
             imagen: '/images/products/termo2.jpg',
+            idProducto: 'producto2',
             descripcion: 'El Stanley Classic Flip es un vaso térmico de acero inoxidable con pajita abatible a prueba de derrames, asa plegable y aislamiento al vacío que mantiene bebidas frías hasta 12 h y con hielo hasta 2 días.',
             comentarios: [
                 {
@@ -51,6 +53,7 @@ let data = {
         {
             nombre: 'Termo Mate System',
             imagen: '/images/products/termo3.jpg',
+            idProducto: 'producto3',
             descripcion: 'El Stanley Mate System es un termo con tapón preciso y tapa-mate, ideal para cebar, que mantiene el agua a temperatura por horas gracias a su aislamiento al vacío.',
             comentarios: [
                 {
@@ -63,6 +66,7 @@ let data = {
         {
             nombre: 'Mate Classic',
             imagen: '/images/products/mate1.jpg',
+            idProducto: 'producto4',
             descripcion: 'Es un mate de acero inoxidable 18/8, libre de BPA y doble pared, que mantiene por más tiempo la temperatura y resulta práctico, higiénico y duradero .',
             comentarios: [
                 {
@@ -80,6 +84,7 @@ let data = {
         {
             nombre: 'Botella termica aerolight',
             imagen: '/images/products/botella1.jpg',
+            idProducto: 'producto5',
             descripcion: 'La Stanley AeroLight es una botella térmica ultraliviana, de acero inoxidable, que mantiene bebidas calientes 8 h, frías 12 h y con hielo hasta 40 h.',
             comentarios: [
                 {
@@ -92,6 +97,7 @@ let data = {
         {
             nombre: 'Taza termica',
             imagen: '/images/products/taza1.jpg',
+            idProducto: 'producto6',
             descripcion: 'Es una taza de acero inoxidable con doble pared aislante que mantiene tu bebida caliente por horas, duradera y apta para el uso diario.',
             comentarios: [
                 {
@@ -104,6 +110,7 @@ let data = {
         {
             nombre: 'Food Jar',
             imagen: '/images/products/tarro1.jpg',
+            idProducto: 'producto7',
             descripcion: 'Es un recipiente de acero inoxidable con aislamiento al vacío, hermético y durable, que conserva tus comidas calientes o frías durante horas.',
             comentarios: [
                 {
@@ -121,6 +128,7 @@ let data = {
         {
             nombre: 'Botella Termica Allday Slim',
             imagen: '/images/products/botella2.jpg',
+            idProducto: 'producto8',
             descripcion: 'Es una botella térmica de acero inoxidable con aislamiento al vacío, tapa a prueba de fugas y cuerpo delgado que se abre en el “hombro” para facilitar el llenado con hielo. Ideal para llevar a todos lados y mantener bebidas frías varias horas.',
             comentarios: [
                 {
@@ -133,6 +141,7 @@ let data = {
         {
             nombre: 'Beer Pin Classic',
             imagen: '/images/products/beer.jpg',
+            idProducto: 'producto9',
             descripcion: 'Es un vaso tipo pint de acero inoxidable 18/8 con doble aislamiento al vacío, tapa de boca ancha “froth-friendly”, abrebotellas incorporado, y mantiene tu cerveza fría varias horas.',
             comentarios: [
                 {
@@ -155,6 +164,7 @@ let data = {
         {
             nombre: 'Termo Clasico',
             imagen: '/images/products/termo4.jpg',
+            idProducto: 'producto10',
             descripcion: 'Es un termo de acero inoxidable 18/8 con doble aislamiento al vacío, tapa que también funciona como taza y asa plegable, capaz de mantener bebidas calientes o frías hasta 24 h, famoso por su resistencia legendaria y construcción confiable.',
             comentarios: [
                 {
