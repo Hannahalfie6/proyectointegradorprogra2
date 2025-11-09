@@ -1,5 +1,20 @@
+const { Association } = require('sequelize');
 let data = require('../localData/index'); 
-let productosController = { 
+let productosController = {
+    producto: function (req, res) {
+        db.Producto.findByPk(req.params.id, {
+            include:[
+                {association: "usuario"},
+                {association:"comentarios", include:[{association:"usuario"}]}
+            ]
+        })
+        .then(function (results) {
+            res.render("product", {producto: results});
+        })
+        .catch(function (error) {
+            res.send("Error buscando el producto: " + error);
+        });
+    },
     detalle: function(req, res){ 
         let producto = {}
         for (let i = 0; i < data.productos.length; i++) {
