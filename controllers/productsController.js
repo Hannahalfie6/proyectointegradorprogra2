@@ -1,34 +1,43 @@
-const { Association } = require('sequelize');
-let data = require('../localData/index'); 
+const db = require('../database/models');
 let productosController = {
+    home: function (req, res) {
+        db.Producto.findAll({
+            include: [
+                { association: "usuario" } 
+            ],
+            order: [['createdAt', 'DESC']] 
+        })
+        .then(function(products) {
+            return res.render('index', { products: products });
+        })
+        .catch(function(err) {
+            console.log(err);
+            return res.send("Error al traer los productos: " + err);
+        });
+    },
+
     producto: function (req, res) {
         db.Producto.findByPk(req.params.id, {
             include:[
-                {association: "usuario"},
-                {association:"comentarios", include:[{association:"usuario"}]}
+                { association: "usuario" },
+                { association: "comentarios", include: [{ association: "usuario" }] }
             ]
         })
-        .then(function (results) {
-            res.render("product", {producto: results});
+        .then(function (result) {
+            if (!result) {
+                return res.status(404).send("Producto no encontrado");
+            }
+            res.render("product", { producto: result });
         })
         .catch(function (error) {
+            console.log(error);
             res.send("Error buscando el producto: " + error);
         });
     },
-    detalle: function(req, res){ 
-        let producto = {}
-        for (let i = 0; i < data.productos.length; i++) {
-            if (data.productos[i].idProducto == req.params.id) {
-                producto = data.productos[i]
-            }
-        }
-        return res.render('product', {data: producto, usuario:{ }}) // es estatico por eso 0 
-    }, 
+
     agregar: function(req, res) { 
-            return res.render('product-add', {usuario:{ }}) 
+        return res.render('product-add', { usuario: {} }) 
     } 
-}; 
+};
 
-
-    
 module.exports = productosController;

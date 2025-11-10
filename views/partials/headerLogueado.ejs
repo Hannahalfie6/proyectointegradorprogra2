@@ -38,11 +38,14 @@
             </ul>
             <ul class="right-navbar">
                 <li>
-                    <% if (usuario.nombreUsuario!= undefined) { %>
-                        <a href="profile.html"> <%= usuario.nombreUsuario %> <i class="fas fa-user"></i></a>
-                    <%  } else { %>
-                        <a href="/users/profile"> Nombre de usuario <i class="fas fa-user"></i></a>
-                    <%  }%>
+                    <% if (usuario) { %>
+                        <a href="/users/profile/<%= usuario.id %>">
+                            <%= usuario.email %> <i class="fas fa-user"></i>
+                        </a>
+                    <% } else { %>
+                        <a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+                    <% } %>
+                    
                     
                 </li>
                 <li>

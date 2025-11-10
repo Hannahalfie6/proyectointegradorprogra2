@@ -3,8 +3,25 @@ const bcrypt = require('bcryptjs');
 const { Op } = require('sequelize');
 let usersController = {
     profile: function (req, res) {
-        return res.render('profile', { usuario: data.usuario, productos: data.productos }) // es estatico por eso 0
-    },
+        let userId = req.params.id;
+    
+        db.Usuario.findByPk(userId, {
+            include: [
+                { association: "productos" }
+            ]
+        })
+        .then(function(usuario) {
+            if (!usuario) {
+                return res.send("Usuario no encontrado");
+            }
+    
+            return res.render('profile', { usuario: usuario, productos: usuario.productos });
+        })
+        .catch(function(err) {
+            console.log(err);
+            return res.send("Error buscando el usuario: " + err);
+        });
+    },    
     register: function (req, res) {
         return res.render('register', { usuario: {} })
     },
@@ -12,8 +29,13 @@ let usersController = {
         return res.render('login', { usuario: {} })
     },
     logout: function (req, res) {
-        return res.render('login', { usuario: {} })
-    },
+        // Borrar cookie si existe
+        if (req.cookies.user) {
+            res.clearCookie("user");
+        }
+        req.session.destroy();
+        return res.redirect("/");
+        },
     procesoregistro: function (req, res) {
 
         db.Usuario.findOne({

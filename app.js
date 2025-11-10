@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+var session = require('express-session');
 
 var app = express();
 
@@ -19,7 +20,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: "mensaje secreto",
+  resave: false,
+  saveUninitalized: true
+}));
 
+app.use(function(req, res, next){
+  res.locals.usuario = req.session.user || null;
+  next();
+});
+app.use(function(req, res, next){
+  if(req.session.user != undefined){
+    res.locals.user = rq.session.user;
+  }
+  next();
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
