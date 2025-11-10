@@ -36,8 +36,44 @@ let productosController = {
     },
 
     agregar: function(req, res) { 
-        return res.render('product-add', { usuario: {} }) 
-    } 
+        if (req.session.user) {
+          res.render("product-add", {usuario: req.session.user});
+        } else {
+          res.redirect("/login");
+        }
+    },
+    guardar: function (req, res) {
+        db.Producto.create({
+            imagen: req.body.imagen,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            usuarioId: req.session.user.id,
+        }) 
+         .then(function() {
+            return res.redirect('/');
+        })
+        .catch(function(error){
+          res.send("Error agregando el producto: " + error);
+        });
+    },
+
+    comentario: function (req, res) {
+        if (req.session.user) {
+            return res.redirect ('/users/login');
+        }
+        db.Comentario.create({
+            texto: req.body.texto,
+            usuarioId: req.session.user.id,
+            productoId: req.params.id,
+        })
+        .then(function () {
+            return res.redirect('/producto/detalle/' + req.params.id);
+          })
+          .catch(function (error) {
+            return res.send("Error creando el comentario: " + error)
+  
+          });
+    }
 };
 
 module.exports = productosController;
