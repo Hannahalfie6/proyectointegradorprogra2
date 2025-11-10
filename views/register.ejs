@@ -5,7 +5,11 @@
 
 <body>
 	<!-- Header -->
-	<%- include('./partials/header') %>
+	<% if (locals.user != undefined) { %>
+		<%- include("./partials/headerLogueado",{usuario: locals.user}) %>
+	<% } else { %>
+		<%- include("./partials/header") %>
+	<% } %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -27,6 +31,10 @@
 		<label>Contraseña: </label>
 		<div>
 			<input class="campo" placeholder="Ingrese su contraseña" type="password" name="contrasena" required> 
+		</div>
+		<label>Foto: </label>
+		<div>
+			<input class="campo" placeholder="Ingrese un foto de usuario" type="text" name="foto" required> 
 		</div>
 		<div>
 			<button type="submit"> Registrarme </button>

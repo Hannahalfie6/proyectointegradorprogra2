@@ -55,6 +55,7 @@ let usersController = {
                         db.Usuario.create({
                             email: req.body.email,
                             password: contrasenaEncriptada,
+                            fotoPerfil: req.body.foto
                         })
                             .then(function (result) {
                                 return res.redirect("/users/login");

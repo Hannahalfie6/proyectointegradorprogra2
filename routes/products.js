@@ -6,4 +6,6 @@ let productsController = require('../controllers/productsController');
 router.get('/detalle/:id', productsController.producto);
 router.get('/agregar', productsController.agregar);
 
+router.post('/agregarproducto', productsController.guardar);
+
 module.exports = router;

@@ -5,7 +5,11 @@
 
 <body>
 	<!-- Header -->
-	<%- include('./partials/header') %>
+	<% if (locals.user != undefined) { %>
+		<%- include("./partials/headerLogueado",{usuario: locals.user}) %>
+	<% } else { %>
+		<%- include("./partials/header") %>
+	<% } %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -17,7 +21,7 @@
 			<!-- Show the "ultimos" products -->
 
 	<form class="login-form" method="POST" action="/users/login">
-		<label>Nombre de usuario: </label>
+		<label>Email: </label>
 		<div>
 			<input class="campo" placeholder="Ingrese su usuario" type="text" name="usuario" required>
 		</div> 

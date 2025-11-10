@@ -6,9 +6,8 @@
 
 <body>
 	<!-- Header -->
-	<%- include('./partials/headerLogueado') %>
-	<% if (locals.Usuario != undefined) { %>
-		<%- include("./partials/headerLogueado",{usuario:usuario}) %>
+	<% if (locals.user != undefined) { %>
+		<%- include("./partials/headerLogueado",{usuario: locals.user}) %>
 	<% } else { %>
 		<%- include("./partials/header") %>
 	<% } %>
@@ -23,7 +22,7 @@
 
 			<!-- Show the "ultimos" products -->
 
-	<form class="product-form" method="get" action="/product/agregarproducto">
+	<form class="product-form" method="post" action="/products/agregarproducto">
 		<label> Imagen del producto: </label>
 		<div>
 			<input placeholder="Agregar una imagen" type="text" name="imagen" required>

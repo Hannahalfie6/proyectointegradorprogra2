@@ -23,7 +23,7 @@ let productosController = {
         if (req.session.user) {
           res.render("product-add", {usuario: req.session.user});
         } else {
-          res.redirect("/login");
+          res.redirect("/users/login");
         }
     },
     guardar: function (req, res) {
