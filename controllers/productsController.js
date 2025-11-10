@@ -1,21 +1,5 @@
 const db = require('../database/models');
 let productosController = {
-    home: function (req, res) {
-        db.Producto.findAll({
-            include: [
-                { association: "usuario" } 
-            ],
-            order: [['createdAt', 'DESC']] 
-        })
-        .then(function(products) {
-            return res.render('index', { products: products });
-        })
-        .catch(function(err) {
-            console.log(err);
-            return res.send("Error al traer los productos: " + err);
-        });
-    },
-
     producto: function (req, res) {
         db.Producto.findByPk(req.params.id, {
             include:[

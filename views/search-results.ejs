@@ -16,6 +16,9 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+			 <% if (productos.length==0){%>
+				<p>No hay productos para esa busqueda</p>
+			 <% } %>
 			<% for( let i = 0; i < productos.length; i++ ) { %>
 				<article class="product-box resultado">
 					<img src="<%= productos[i].imagen %>" alt="<%= productos[i].nombre %>">
