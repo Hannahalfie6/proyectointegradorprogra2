@@ -42,16 +42,16 @@ let productosController = {
     },
 
     comentario: function (req, res) {
-        if (req.session.user) {
+        if (!req.session.user) {
             return res.redirect ('/users/login');
         }
         db.Comentario.create({
-            texto: req.body.texto,
-            usuarioId: req.session.user.id,
-            productoId: req.params.id,
+            comentario: req.body.texto,
+            usuario_id: req.session.user.id,
+            producto_id: req.params.id,
         })
         .then(function () {
-            return res.redirect('/producto/detalle/' + req.params.id);
+            return res.redirect('/products/detalle/' + req.params.id);
           })
           .catch(function (error) {
             return res.send("Error creando el comentario: " + error)
