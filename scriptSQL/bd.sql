@@ -36,11 +36,11 @@ CREATE TABLE comentarios (
 	);
 
 INSERT INTO usuarios (email, password, fotoPerfil) VALUES
-('diribarren@udesa.edu.ar', 'progra2', 'delfi.png'),
-('sanchezma@udesa.edu.ar', 'udesa2025', 'magui.png'),
-('halfie@udesa.edu.ar', 'digitalhouse', 'hannah.png'),
-('bgomez@digitalhouse.comr', 'DH2025', 'brian.png'),
-('valentin.varela@digitalhouse.com', 'profeDH', 'valentin.png');
+('diribarren@udesa.edu.ar', 'progra2', 'usuario2.jpg'),
+('sanchezma@udesa.edu.ar', 'udesa2025', 'usuario3.jpg'),
+('halfie@udesa.edu.ar', 'digitalhouse', 'usuario4.jpg'),
+('bgomez@digitalhouse.comr', 'DH2025', 'usuario5.jpg'),
+('valentin.varela@digitalhouse.com', 'profeDH', 'usuario6.jpg');
 
 INSERT INTO productos (usuario_id, imagen, nombre, descripcion) VALUES
 (1, '/images/products/termo1.jpg', 'Termo Quencher 30OZ', 'El Stanley Quencher 30 oz es un vaso térmico de acero inoxidable, con tapa giratoria, pajita, asa y gran capacidad para mantener bebidas frías o calientes por horas.'),

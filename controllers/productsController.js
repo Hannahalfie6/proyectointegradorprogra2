@@ -11,6 +11,7 @@ let productosController = {
             if (!result) {
                 return res.status(404).send("Producto no encontrado");
             }
+            console.log(result)
             res.render("product", { producto: result });
         })
         .catch(function (error) {
@@ -27,11 +28,12 @@ let productosController = {
         }
     },
     guardar: function (req, res) {
+        console.log(req.session.user)
         db.Producto.create({
             imagen: req.body.imagen,
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
-            usuarioId: req.session.user.id,
+            usuario_id: req.session.user.id,
         }) 
          .then(function() {
             return res.redirect('/');
