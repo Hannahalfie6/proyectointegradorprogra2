@@ -97,7 +97,7 @@ let usersController = {
                     req.session.user = resultado;
 
                     if (userInfo.recordarme != undefined) {
-                        res.cookie("user", userInfo, { maxAge: 600000 })
+                        res.cookie("user", resultado, { maxAge: 600000 })
                     }
                     res.redirect("/")
                     } else {

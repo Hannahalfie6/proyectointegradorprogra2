@@ -26,7 +26,7 @@ app.use(session({
   saveUninitalized: true
 }));
 
-app.use(function(req, res, next){
+app.use(function(req, res, next){ //middleware que chequea que req res sea igual a session y guarda en locals esa informacion 
   res.locals.user = req.session.user || null;
   next();
 });
@@ -36,6 +36,17 @@ app.use(function(req, res, next){
   }
   next();
 });
+//guardar informacion de cookies
+app.use(function (req, res, next) {
+  if (req.cookies.user != undefined && req.session.user == undefined){
+    req.session.user = req.cookies.user;
+    req.locals.user = req.cookies.user;
+  }
+  next();
+})
+
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
