@@ -30,11 +30,10 @@
 						 class="product-detail-img">
 					
 					<p class="product-detail-description"><%= producto.descripcion %></p>
-
 					<p>
 						Cargado por: 
 						<a href="/users/profile/<%= producto.usuario.id %>">
-							<strong><%= producto.usuario.username || producto.usuario.email %></strong>
+							<strong><%= producto.usuario.email %></strong>
 						</a>
 					</p>
 				</article>
